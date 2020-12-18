@@ -1,32 +1,23 @@
 <template>
   <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </div>
+    <Footer /> 
     <router-view/>
   </div>
 </template>
 
+<script>
+// import uri from "@/config/uri"
+// import foot from '../../components/TabBar/footer.vue'
+import Footer from "@/components/TabBar/footer"
+
+export default {
+  components:{Footer},
+  // async created(){
+  //   let ret = await this.$http.get(uri.getNowPlaying);
+  //   console.log(ret);
+  // }
+}
+</script>
 <style lang="scss">
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-}
 
-#nav {
-  padding: 30px;
-
-  a {
-    font-weight: bold;
-    color: #2c3e50;
-
-    &.router-link-exact-active {
-      color: #42b983;
-    }
-  }
-}
 </style>
